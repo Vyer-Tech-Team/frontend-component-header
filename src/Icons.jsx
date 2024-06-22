@@ -44,3 +44,17 @@ export const CaretIcon = (props) => (
     />
   </svg>
 );
+
+export const UserIcon = (props) => (
+  <svg 
+    width="36" 
+    height="36" 
+    viewBox="0 0 36 36" 
+    fill="none" 
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <circle cx="18" cy="9" r="6" stroke="#082644" strokeWidth="1.5"/>
+    <path d="M22.5 30.9226C21.1361 31.2928 19.6104 31.5 18 31.5C12.201 31.5 7.5 28.8137 7.5 25.5C7.5 22.1863 12.201 19.5 18 19.5C23.799 19.5 28.5 22.1863 28.5 25.5C28.5 26.0179 28.3851 26.5206 28.1692 27" stroke="#082644" stroke-width="1.5" stroke-linecap="round"/>
+  </svg>
+)

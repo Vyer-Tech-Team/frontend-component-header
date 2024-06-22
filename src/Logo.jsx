@@ -17,7 +17,7 @@ const LinkedLogo = ({
   ...attributes
 }) => (
   <a href={href} {...attributes}>
-    <img className="d-block" src={src} alt={alt} />
+    {src ? <img className="d-block" src={src} alt={alt} /> : null}
   </a>
 );
 
