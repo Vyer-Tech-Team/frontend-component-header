@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/openedx/frontend-component-header#readme",
   "devDependencies": {
-    "@edx/brand": "npm:@openedx/brand-openedx@^1.2.2",
+    "@edx/brand": "github:Vyer-Tech-Team/brand-openedx",
     "@edx/browserslist-config": "^1.1.1",
     "@edx/frontend-platform": "8.0.4",
     "@edx/reactifex": "^2.1.1",
