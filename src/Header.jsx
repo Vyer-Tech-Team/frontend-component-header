@@ -15,6 +15,7 @@ import DesktopHeader from './DesktopHeader';
 import MobileHeader from './MobileHeader';
 
 import messages from './Header.messages';
+import { logoUrls } from './logos';
 
 ensureConfig([
   'LMS_BASE_URL',
@@ -49,7 +50,7 @@ subscribe(APP_CONFIG_INITIALIZED, () => {
 const Header = ({
   intl, mainMenuItems, secondaryMenuItems, userMenuItems,
 }) => {
-  const { authenticatedUser, config } = useContext(AppContext);
+  const { authenticatedUser, config  } = useContext(AppContext);
 
   const defaultMainMenu = [
     {
@@ -93,7 +94,13 @@ const Header = ({
   const mainMenu = mainMenuItems || defaultMainMenu;
   const secondaryMenu = secondaryMenuItems || [];
   const userMenu = authenticatedUser === null ? [] : userMenuItems || defaultUserMenu;
-
+  function getLogo(fieldName, data) {
+    const item = data.find(obj => obj.fieldName === fieldName);
+    
+    return logoUrls[item ? item.fieldValue : 'default']
+}
+  // const schoolLogo = getFieldValue('shool', authenticatedUser?.extendedProfile)
+  // console.log(authenticatedUser?.extendedProfile)
   const loggedOutItems = [
     {
       type: 'item',
@@ -107,8 +114,9 @@ const Header = ({
     },
   ];
 
+  console.log("authenticatedUser", authenticatedUser)
   const props = {
-    logo: config.LOGO_URL,
+    logo: authenticatedUser !== null &&  authenticatedUser?.extendedProfile ? getLogo('school', authenticatedUser?.extendedProfile) : '',
     logoAltText: config.SITE_NAME,
     logoDestination: `${config.LMS_BASE_URL}/dashboard`,
     loggedIn: authenticatedUser !== null,
