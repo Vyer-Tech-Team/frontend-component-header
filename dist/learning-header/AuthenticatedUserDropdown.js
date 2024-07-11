@@ -12,10 +12,7 @@ var AuthenticatedUserDropdown = function AuthenticatedUserDropdown(_ref) {
   var dashboardMenuItem = /*#__PURE__*/React.createElement(Dropdown.Item, {
     href: "".concat(getConfig().LMS_BASE_URL, "/dashboard")
   }, intl.formatMessage(messages.dashboard));
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("a", {
-    className: "text-gray-700",
-    href: "".concat(getConfig().SUPPORT_URL)
-  }, intl.formatMessage(messages.help)), /*#__PURE__*/React.createElement(Dropdown, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Dropdown, {
     className: "user-dropdown ml-3"
   }, /*#__PURE__*/React.createElement(Dropdown.Toggle, {
     variant: "outline-primary"
@@ -29,12 +26,6 @@ var AuthenticatedUserDropdown = function AuthenticatedUserDropdown(_ref) {
   }, username)), /*#__PURE__*/React.createElement(Dropdown.Menu, {
     className: "dropdown-menu-right"
   }, dashboardMenuItem, /*#__PURE__*/React.createElement(Dropdown.Item, {
-    href: "".concat(getConfig().ACCOUNT_PROFILE_URL, "/u/").concat(username)
-  }, intl.formatMessage(messages.profile)), /*#__PURE__*/React.createElement(Dropdown.Item, {
-    href: getConfig().ACCOUNT_SETTINGS_URL
-  }, intl.formatMessage(messages.account)), getConfig().ORDER_HISTORY_URL && /*#__PURE__*/React.createElement(Dropdown.Item, {
-    href: getConfig().ORDER_HISTORY_URL
-  }, intl.formatMessage(messages.orderHistory)), /*#__PURE__*/React.createElement(Dropdown.Item, {
     href: getConfig().LOGOUT_URL
   }, intl.formatMessage(messages.signOut)))));
 };
