@@ -43,11 +43,8 @@ var LearningHeader = function LearningHeader(_ref2) {
     alt: getConfig().SITE_NAME
   });
   return /*#__PURE__*/React.createElement("header", {
-    className: "learning-header"
-  }, /*#__PURE__*/React.createElement("a", {
-    className: "sr-only sr-only-focusable",
-    href: "#main-content"
-  }, intl.formatMessage(messages.skipNavLink)), /*#__PURE__*/React.createElement("div", {
+    className: "learning-header border-bottom border-light"
+  }, /*#__PURE__*/React.createElement("div", {
     className: "container-xl py-2 d-flex align-items-center"
   }, headerLogo, /*#__PURE__*/React.createElement("div", {
     className: "flex-grow-1 course-title-lockup",

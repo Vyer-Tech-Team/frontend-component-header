@@ -40,8 +40,8 @@ const LearningHeader = ({
   );
 
   return (
-    <header className="learning-header">
-      <a className="sr-only sr-only-focusable" href="#main-content">{intl.formatMessage(messages.skipNavLink)}</a>
+    <header  className="learning-header border-bottom border-light">
+      {/* <a className="sr-only sr-only-focusable" href="#main-content">{intl.formatMessage(messages.skipNavLink)}</a> */}
       <div className="container-xl py-2 d-flex align-items-center">
         {headerLogo}
         <div className="flex-grow-1 course-title-lockup" style={{ lineHeight: 1 }}>
